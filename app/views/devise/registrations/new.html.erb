@@ -1,12 +1,23 @@
-<h2>Sign up</h2>
-
+<h2>Register</h2>
+<div class="container">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true %>
   </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autocomplete: "email" %>
+  </div>
+
 
   <div class="field">
     <%= f.label :password %>
@@ -21,9 +32,17 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+<div class="field">
+    <%= f.label :hcbc, "Your HCBC number (current HCBC membership is mandatory)" %><br />
+    <%= f.text_field :last_name %>
+  
+  <%= f.check_box :hcbc_active %>
+<%= f.label :hcbc_active, "un-tick if your membership is out of date" %>
+</div>
+
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Register" %>
   </div>
 <% end %>
-
+</div>
 <%= render "devise/shared/links" %>
