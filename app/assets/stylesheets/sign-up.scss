@@ -1,0 +1,20 @@
+$font-stack: 'Trebuchet MS', Arial, sans-serif;
+$primary-color: #004578;
+
+.container {
+  font: 100% $font_stack;
+
+  h2 {
+    color: $primary-color;
+  }
+  .field {
+    padding-top: 20px;
+  }
+  .actions {
+    padding-top: 20px;
+  }
+}
+.navbar {
+  background-color: $primary-color;
+  color: white;
+}
