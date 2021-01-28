@@ -1,7 +1,10 @@
   import React from 'react'
+  import MyCalendar from './Calendar'
 
   export default function App () {
+    
     return (
-      <div> Hello beautiful puppy </div>
+      <MyCalendar />
+      
     )
   }
